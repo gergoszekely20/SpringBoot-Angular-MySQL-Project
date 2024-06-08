@@ -1,0 +1,10 @@
+com.example.GuitarSite
+com.example.GuitarSite.controller
+com.example.GuitarSite.event
+com.example.GuitarSite.listener
+com.example.GuitarSite.model
+com.example.GuitarSite.parolaTest
+com.example.GuitarSite.program
+com.example.GuitarSite.repository
+com.example.GuitarSite.service
+com.example.GuitarSite.service.implementation

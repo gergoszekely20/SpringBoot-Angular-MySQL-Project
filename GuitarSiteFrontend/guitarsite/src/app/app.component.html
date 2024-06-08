@@ -1,0 +1,89 @@
+<div *ngIf="!isUserLoggedIn && !isAdminLoggedIn">
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar-brand">GuitarBuy</span>
+    <span class="spacer"></span>
+    <button
+      mat-button
+      routerLink="customer/homepage"
+      routerLinkActivate="active"
+    >
+      Hompage
+    </button>
+    <button mat-button routerLink="/signup" routerLinkActivate="active">
+      Register
+    </button>
+    <button mat-button routerLink="/login" routerLinkActivate="active">
+      Log In
+    </button>
+  </mat-toolbar>
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar-brand">GuitarBuy</span>
+    <span class="spacer"></span>
+
+    <button mat-button routerLink="/admin/homepage" routerLinkActivate="active">
+      Hompage
+    </button>
+    <button mat-button routerLink="/admin/product" routerLinkActivate="active">
+      Product
+    </button>
+    <button mat-button routerLink="/admin/orders" routerLinkActivate="active">
+      Orders
+    </button>
+    <button
+      mat-button
+      routerLink="/admin/productservice"
+      routerLinkActivate="active"
+    >
+      Service
+    </button>
+    <button mat-button routerLinkActive="active" (click)="logout()">
+      Log Out
+    </button>
+  </mat-toolbar>
+</div>
+
+<div *ngIf="isUserLoggedIn">
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar-brand">GuitarBuy</span>
+    <span class="spacer"></span>
+    <button
+      mat-button
+      routerLink="/customer/homepage/"
+      routerLinkActivate="active"
+    >
+      Hompage
+    </button>
+    <button mat-button routerLink="/customer/cart/" routerLinkActivate="active">
+      Cart
+    </button>
+    <button
+      mat-button
+      routerLink="/customer/productService"
+      routerLinkActivate="active"
+    >
+      Product Service
+    </button>
+    <button
+      mat-button
+      routerLink="/customer/profile"
+      routerLinkActivate="active"
+    >
+      Profile
+    </button>
+    <button
+      mat-button
+      routerLink="/customer/my__orders"
+      routerLinkActivate="active"
+    >
+      My orders
+    </button>
+    <button mat-button routerLinkActive="active" (click)="logout()">
+      Log Out
+    </button>
+  </mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>

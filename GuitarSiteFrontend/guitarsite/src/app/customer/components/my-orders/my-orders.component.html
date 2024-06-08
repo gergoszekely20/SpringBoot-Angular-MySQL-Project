@@ -1,0 +1,72 @@
+<ng-container>
+  <mat-table #basicTable [dataSource]="myOrders" class="mat-elevated-z8">
+    <ng-container matColumnDef="idOrder">
+      <mat-header-cell
+        *matHeaderCellDef
+        style="font-weight: bold; color: rgb(142, 142, 218)"
+      >
+        Tracking ID
+      </mat-header-cell>
+      <mat-cell *matCellDef="let myorder">{{ myorder.idOrder }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+      <mat-header-cell
+        *matHeaderCellDef
+        style="font-weight: bold; color: rgb(142, 142, 218)"
+      >
+        Amount
+      </mat-header-cell>
+      <mat-cell *matCellDef="let myorder">{{
+        myorder.amount | number : "1.2-2"
+      }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <mat-header-cell
+        *matHeaderCellDef
+        style="font-weight: bold; color: rgb(142, 142, 218)"
+      >
+        Address
+      </mat-header-cell>
+      <mat-cell *matCellDef="let myorder">{{ myorder.address }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="orderDescription">
+      <mat-header-cell
+        *matHeaderCellDef
+        style="font-weight: bold; color: rgb(142, 142, 218)"
+      >
+        Order Description
+      </mat-header-cell>
+      <mat-cell *matCellDef="let myorder">{{
+        myorder.orderDescription
+      }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+      <mat-header-cell
+        *matHeaderCellDef
+        style="font-weight: bold; color: rgb(142, 142, 218)"
+      >
+        Order Date
+      </mat-header-cell>
+      <mat-cell *matCellDef="let myorder">{{
+        myorder.date | date : "dd/MM/yyyy"
+      }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="orderStatus">
+      <mat-header-cell
+        *matHeaderCellDef
+        style="font-weight: bold; color: rgb(142, 142, 218)"
+      >
+        Order Status
+      </mat-header-cell>
+      <mat-cell *matCellDef="let myorder">{{ myorder.orderStatus }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</ng-container>

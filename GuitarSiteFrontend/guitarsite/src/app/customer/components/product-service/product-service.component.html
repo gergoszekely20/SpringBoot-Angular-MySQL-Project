@@ -1,0 +1,72 @@
+<div class="container">
+  <h2>Add Product Service</h2>
+  <form [formGroup]="productForm" (ngSubmit)="addProductService()">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Contact Info</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="ContactInfo"
+        formControlName="contactInfo"
+      />
+      <mat-error
+        *ngIf="
+          productForm.get('contactInfo').invalid &&
+          productForm.get('contactInfo').touched
+        "
+      >
+        This input is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>What kind of Guitar you have?</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="GuitarName"
+        formControlName="guitarName"
+      />
+      <mat-error
+        *ngIf="
+          productForm.get('guitarName').invalid &&
+          productForm.get('guitarName').touched
+        "
+      >
+        This input is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Your Guitar Type</mat-label>
+      <input matInput type="text" placeholder="type" formControlName="type" />
+      <mat-error
+        *ngIf="
+          productForm.get('type').invalid && productForm.get('type').touched
+        "
+      >
+        This input is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>In what can we halp?</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Guitar Problem"
+        formControlName="guitarProblem"
+      />
+      <mat-error
+        *ngIf="
+          productForm.get('guitarProblem').invalid &&
+          productForm.get('guitarProblem').touched
+        "
+      >
+        This input is required
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Add Product</button>
+  </form>
+</div>

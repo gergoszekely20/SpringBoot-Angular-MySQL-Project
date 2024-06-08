@@ -1,0 +1,52 @@
+<div *ngIf="cartItems.length > 0; else emptyCart">
+  <div class="cart-container">
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <div class="product-info">
+        <img [src]="item.cartImage" alt="product-image" />
+      </div>
+
+      <div class="product-details">
+        <div class="item-row" [ngClass]="{ highlight: item.highlighted }">
+          {{ item.guitarName }}
+        </div>
+
+        <div class="item-price">{{ item.price | number : "1.2-2" }} Lei</div>
+        <div class="quantity-controls">
+          <button
+            mat-icon-button
+            [disabled]="!item.canDecreaseQuantity"
+            (click)="decreaseQuantity(item.idGuitar)"
+          >
+            <mat-icon>remove_circle_outline</mat-icon>
+          </button>
+          <span class="quantity">{{ item.quantity }}</span>
+          <button
+            mat-icon-button
+            [disabled]="!item.canIncreaseQuantity"
+            (click)="increaseQuantity(item.idGuitar)"
+          >
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="total-price">
+      Total Amount: {{ order.totalAmount | number : "1.2-2" }} Lei
+    </div>
+    <div class="total-price">
+      Amount: {{ order.amount | number : "1.2-2" }} Lei
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="placeOrder()">
+        Place Order
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <div class="empty-cart">
+    <mat-icon class="icon">remove_shopping_cart</mat-icon>
+    <span>Your shopping cart is empty</span>
+  </div>
+</ng-template>

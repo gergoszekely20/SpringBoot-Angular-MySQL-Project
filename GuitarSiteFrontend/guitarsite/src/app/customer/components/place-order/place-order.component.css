@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53vh;
+  width: 600px;
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
+mat-card {
+  width: 600px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+mat-card-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #000;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+description-label {
+  height: 120px;
+}
+
+.mat-form-field.mat-focused .mat-form-label {
+  color: #005a8d;
+}
+
+mat-error {
+  color: #ff0000;
+  font-size: 12px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.order-button,
+.close-button {
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.order-button {
+  background-color: #005a8d;
+  color: #ffffff;
+}
+
+.close-button {
+  background-color: #ff5f5f;
+  color: #ffffff;
+}
+
+.order-button:hover,
+.close-button:hover {
+  background-color: #004670;
+}
+
+button:focus {
+  outline: none;
+}
+
+mat-label {
+  color: #000;
+  font-size: 14px;
+}
+
+.container input {
+  color: rgb(20, 20, 20);
+  border-color: #000;
+}

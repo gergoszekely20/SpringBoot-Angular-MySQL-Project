@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+mat-card-content {
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+tr {
+  background-color: #ffffff;
+}
+
+th {
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #333;
+}
+
+td {
+  background-color: #fff;
+  color: #555;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button[mat-raised-button] {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button[mat-raised-button].mat-primary {
+  background-color: #005a8d;
+  color: #fff;
+}
+
+button[mat-raised-button].mat-primary:hover {
+  background-color: #004670;
+}
+
+button[mat-raised-button].mat-warn {
+  background-color: #ff5f5f;
+  color: #fff;
+}
+
+button[mat-raised-button].mat-warn:hover {
+  background-color: #d94a4a;
+}
+
+mat-menu span {
+  display: block;
+}
+
+mat-menu button[mat-menu-item] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+mat-menu button[mat-menu-item]:hover {
+  background-color: #f0f0f0;
+}
+
+button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  th,
+  td {
+    padding: 12px;
+  }
+
+  button[mat-raised-button] {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  mat-menu button[mat-menu-item] {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
